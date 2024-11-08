@@ -9,12 +9,12 @@ CREATE TABLE Borrower (
 	Status VARCHAR(10));
 
 INSERT INTO Borrower VALUES
-(41, 'Abhisek', '2022-09-19', 'Operating System', 'I'),
-(05, 'Karan', '2022-07-24', 'Object Oriented Programming', 'I'),
-(23, 'Baliram', '2022-06-12', 'Microprocessor', 'I'),
+(41, 'prince', '2022-09-19', 'Operating System', 'I'),
+(05, 'avi', '2022-07-24', 'Object Oriented Programming', 'I'),
+(23, 'diksha', '2022-06-12', 'Microprocessor', 'I'),
 (48, 'Mayur', '2022-04-19', 'Mechanics', 'I'),
-(47, 'Sanket', '2022-05-20', 'DS', 'I'),
-(25, 'Vishwa', '2022-06-21', 'DELD', 'I');
+(47, 'prasen', '2022-05-20', 'DS', 'I'),
+(25, 'chaitu', '2022-06-21', 'DELD', 'I');
 
  CREATE TABLE Fine (
 	Rollno INT(4),
