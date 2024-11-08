@@ -8,12 +8,12 @@ CREATE TABLE o_rollcall (
 );
 
 INSERT INTO o_rollcall VALUES
-    (1, 'Abhishek', 'Pimpri'),
-    (2, 'Rashmika', 'Chakan'),
-    (3, 'Sakshi', 'Ravet'),
+    (1, 'prince', 'akurdi'),
+    (2, 'avishkar', 'chinchwad'),
+    (3, 'diksha', 'nigdi'),
     (4, 'Mayur', 'Alandi'),
-    (5, 'Amit', 'Elpro'),
-    (6, 'Kajal', 'Mumbai');
+    (5, 'rhushikesh', 'Elpro'),
+    (6, 'prasen', 'Mumbai');
 
 SELECT * FROM o_rollcall;
 
@@ -43,6 +43,7 @@ BEGIN
             LEAVE emp_loop;
         END IF;
 
+        -- Insert only if roll_no1 is not in n_rollcall
         IF NOT EXISTS (SELECT * FROM n_rollcall WHERE roll_no = roll_no1) THEN
             INSERT INTO n_rollcall (roll_no, name, address)
             SELECT roll_no, name, address FROM o_rollcall WHERE roll_no = roll_no1;
@@ -52,6 +53,7 @@ END //
 
 DELIMITER ;
 
+-- Call procedure with roll_no0 as 0 to start processing from the beginning
 CALL newcurr(0);
 
 SELECT * FROM n_rollcall;
